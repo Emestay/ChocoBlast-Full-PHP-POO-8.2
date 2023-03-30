@@ -10,9 +10,12 @@ $users = listUsers();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/0e8ceb485d.js" crossorigin="anonymous"></script>
     <title>Liste des utilisateurs</title>
 </head>
 <body>
+<?php include '../components/Navbar.php'; ?>
+
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <h1 class="text-4xl text-center font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 mb-8 tracking-wider">
         Liste des utilisateurs
@@ -67,7 +70,7 @@ $users = listUsers();
         </table>
     </div>
 </div>
-
+<?php include '../components/Footer.php'; ?>
 
 </body>
 </html>
