@@ -1,6 +1,6 @@
 <?php
-require_once '../utils/BddConnect.php';
-require_once '../model/utilisateur.php';
+require __DIR__ . '../../utils/BddConnect.php';
+require __DIR__ . '../../model/utilisateur.php';
 
 function listUsers()
 {
@@ -16,7 +16,7 @@ function deleteUser($id)
     $bdd = BddConnect::connexion();
     $stmt = $bdd->prepare("DELETE FROM utilisateur WHERE id_utilisateur = ?");
     $stmt->execute([$id]);
-    header('Location: http://localhost/chocoFull/app/vue/view_list_user.php');
+    header('Location: /ChocoFull/Users');
     exit();
 }
 

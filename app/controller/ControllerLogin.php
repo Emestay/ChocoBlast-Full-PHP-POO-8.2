@@ -23,14 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['user_prenom'] = $userRow['prenom_utilisateur'];
                 $_SESSION['user_mail'] = $userRow['mail_utilisateur'];
 
-                header("Location: ../vue/view_home.php");
+                header("Location: /ChocoFull/");
             } else {
-                header("Location: ../vue/view_login_page.php?error=invalid_password");
+                header("Location: /ChocoFull/Login?error=invalid_password");
             }
         } else {
-            header("Location: ../vue/view_login_page.php?error=invalid_email");
+            header("Location: /ChocoFull/Login?error=invalid_email");
         }
     } else {
-        header("Location: ../vue/view_login_page.php?error=missing_fields");
+        header("Location: /ChocoFull/Login?error=missing_fields");
     }
 }

@@ -7,7 +7,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
 <nav class="bg-gradient-to-r from-indigo-400 to-purple-600 text-white px-4 py-4 shadow-md">
     <div class="container mx-auto flex items-center justify-between">
         <div class="flex items-center space-x-4">
-            <a href="view_home.php" class="font-bold text-lg">
+            <a href="/ChocoFull/" class="font-bold text-lg">
                 <i class="fa-solid fa-envelope text-2xl"></i> Chocoblast
             </a>
         </div>
@@ -15,26 +15,26 @@ $isLoggedIn = isset($_SESSION['user_id']);
             <?php if ($isLoggedIn): ?>
 
                 <li>
-                    <a href="view_list_user.php" class="hover:text-purple-900 flex items-center">
+                    <a href="/ChocoFull/Users" class="hover:text-purple-900 flex items-center">
                         <i class="fas fa-users mr-2"></i>
                         Liste des utilisateurs
                     </a>
                 </li>
                 <li>
-                    <a href="../controller/ControllerLogout.php" class="hover:text-purple-900 flex items-center">
+                    <a href="./app/controller/ControllerLogout.php" class="hover:text-purple-900 flex items-center">
                         <i class="fas fa-sign-out-alt mr-2"></i>
                         Déconnexion
                     </a>
                 </li>
             <?php else: ?>
                 <li>
-                    <a href="view_add_user.php" class="hover:text-purple-900 flex items-center">
+                    <a href="/ChocoFull/Signup" class="hover:text-purple-900 flex items-center">
                         <i class="fas fa-user-plus mr-2"></i>
                         Inscription
                     </a>
                 </li>
                 <li>
-                    <a href="view_login_page.php" class="hover:text-purple-900 flex items-center">
+                    <a href="/ChocoFull/Login" class="hover:text-purple-900 flex items-center">
                         <i class="fas fa-user mr-2"></i>
                         Connexion
                     </a>

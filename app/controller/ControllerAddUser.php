@@ -32,8 +32,8 @@ if (isset($_POST['submit'])) {
             $user->setImage("http://localhost/chocoFull/public/asset/image/$image_name");
             $user->insertUser();
 
-            header('refresh:3;url=http://localhost/chocoFull/app/vue/view_home.php');
-            echo 'Bien joué tu vas etre rediriggé dans 3 secs. Sinon, <a href="http://localhost/chocoFull/app/vue/view_home.php">clique la</a>.';
+            header('refresh:3;url=/ChocoFull/');
+            echo 'Bien joué tu vas etre rediriggé dans 3 secs. Sinon, <a href="/ChocoFull/">clique la</a>.';
 
         } else {
             echo "Un compte avec cette adresse email existe déjà.";

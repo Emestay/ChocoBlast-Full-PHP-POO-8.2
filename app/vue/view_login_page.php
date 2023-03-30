@@ -27,7 +27,7 @@ switch ($error) {
     <title>Connexion</title>
 </head>
 <body>
-<?php include '../components/Navbar.php'; ?>
+<?php include './app/components/Navbar.php'; ?>
 
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <h1 class="text-4xl text-center font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 mb-8 tracking-wider">
@@ -41,7 +41,7 @@ switch ($error) {
                 <span class="block sm:inline"><?php echo $errorMsg; ?></span>
             </div>
         <?php endif; ?>
-        <form action="../controller/ControllerLogin.php" method="post"
+        <form action="./app/controller/ControllerLogin.php" method="post"
               class="flex flex-col">
 
             <label for="email" class="block text-sm font-medium text-gray-700">Email :</label>
@@ -57,7 +57,7 @@ switch ($error) {
         </form>
     </div>
 </div>
-<?php include '../components/Footer.php'; ?>
+<?php include './app/components/Footer.php'; ?>
 
 </body>
 </html>
