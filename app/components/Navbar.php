@@ -13,7 +13,6 @@ $isLoggedIn = isset($_SESSION['user_id']);
         </div>
         <ul class="hidden md:flex items-center space-x-4">
             <?php if ($isLoggedIn): ?>
-
                 <li>
                     <a href="/ChocoFull/Users" class="hover:text-purple-900 flex items-center">
                         <i class="fas fa-users mr-2"></i>

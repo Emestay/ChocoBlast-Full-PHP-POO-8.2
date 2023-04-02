@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="./public/asset/style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0e8ceb485d.js" crossorigin="anonymous"></script>
-    <title>Ajout utilisateur</title>
+    <title>S'inscire</title>
 </head>
 <body>
 <?php include './app/components/Navbar.php'; ?>
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 ">
     <h1 class="text-4xl text-center font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 mb-8 tracking-wider">
-        Ajouter un utilisateur
+        Rejoins nous voyons !
     </h1>
 
     <div class="bg-white shadow-lg overflow-hidden border border-gray-200 sm:rounded-lg max-w-md mx-auto p-8">
