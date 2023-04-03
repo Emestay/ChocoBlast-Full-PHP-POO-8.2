@@ -63,6 +63,51 @@ ob_end_flush();
         html::-webkit-scrollbar-thumb:hover {
             background-image: linear-gradient(to right, #047857, #1e40af);
         }
+
+        .banner {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("https://images.unsplash.com/photo-1623334044303-241021148842?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+            transition: opacity 300ms ease-in-out;
+        }
+
+        .header-container {
+            background-image: linear-gradient(to right, slategray, zinc);
+            opacity: 0.8;
+            backdrop-filter: blur(4px);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 300ms ease-in-out;
+        }
+
+        .header-container:hover {
+            opacity: 0.95;
+            backdrop-filter: blur(7px);
+
+
+
+        }
+
+        .hover-border {
+            border-bottom: 4px solid indigo;
+            cursor: pointer;
+            transition: border-color 300ms ease-in-out;
+        }
+
+        .hover-border:hover {
+            border-color: rgb(79, 70, 229);
+        }
+
+        .text-white {
+            color: white;
+        }
+
     </style>
 
     <title>Accueil</title>
@@ -71,12 +116,11 @@ ob_end_flush();
 <?php include './app/components/Navbar.php'; ?>
 
 
-<div class="min-h-[500px] flex items-center justify-center bg-cover bg-no-repeat bg-center"
-     style="background-image: url('https://source.unsplash.com/featured/?boulangerie');">
-    <header class="bg-gradient-to-r from-slate-300 to-zinc-200 opacity-80 hover:opacity-95 transition duration-300 ease-in-out  backdrop-blur-md p-6 rounded-lg shadow-md">
+<div class="banner">
+    <header class="header-container">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl text-center text-white font-black tracking-tight sm:text-5xl bg-clip-text  mb-6">
-                <span class="border-b-4 border-indigo-400 hover:border-indigo-200 transition duration-300 ease-in-out uppercase cursor-pointer text-white opacity-100 font-bold">CHO CHO CHOCOBLAST 🎵🎶</span>
+            <h2 class="text-4xl text-center text-white font-black tracking-tight sm:text-5xl bg-clip-text mb-6">
+                <span class="hover-border uppercase text-white opacity-100 font-bold">CHO CHO CHOCOBLAST 🎵🎶</span>
             </h2>
             <p class="text-center text-white font-bold text-xl"><?php echo $greeting; ?></p>
         </div>
@@ -182,8 +226,5 @@ ob_end_flush();
     <?php include './app/components/Footer.php'; ?>
 </div>
 
-<script>
-
-</script>
 </body>
 </html>
