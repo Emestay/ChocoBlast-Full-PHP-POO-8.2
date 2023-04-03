@@ -71,12 +71,12 @@ ob_end_flush();
 <?php include './app/components/Navbar.php'; ?>
 
 
-<div class="min-h-[400px] flex items-center justify-center bg-cover bg-no-repeat bg-center"
+<div class="min-h-[500px] flex items-center justify-center bg-cover bg-no-repeat bg-center"
      style="background-image: url('https://source.unsplash.com/featured/?boulangerie');">
-    <header class="bg-gradient-to-r from-slate-300 to-zinc-200 opacity-70 hover:opacity-95 transition duration-300 ease-in-out  backdrop-blur-md p-6 rounded-lg shadow-md">
+    <header class="bg-gradient-to-r from-slate-300 to-zinc-200 opacity-80 hover:opacity-95 transition duration-300 ease-in-out  backdrop-blur-md p-6 rounded-lg shadow-md">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl text-center text-white font-black tracking-tight sm:text-5xl bg-clip-text  mb-6">
-                <span class="border-b-4 border-indigo-400 hover:border-indigo-200 transition duration-300 ease-in-out uppercase cursor-pointer text-white opacity-100">CHO CHO CHOCOBLAST 🎵🎶</span>
+                <span class="border-b-4 border-indigo-400 hover:border-indigo-200 transition duration-300 ease-in-out uppercase cursor-pointer text-white opacity-100 font-bold">CHO CHO CHOCOBLAST 🎵🎶</span>
             </h2>
             <p class="text-center text-white font-bold text-xl"><?php echo $greeting; ?></p>
         </div>
@@ -169,7 +169,8 @@ ob_end_flush();
             <div class="grid grid-cols-3 gap-x-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                        <img src="https://source.unsplash.com/400x300?rat=<?php echo $i; ?>" alt="Rat #<?php echo $i; ?>" class="w-full h-auto mb-2 rounded-lg">
+                        <img src="https://source.unsplash.com/400x300?rat=<?php echo $i; ?>"
+                             alt="Rat #<?php echo $i; ?>" class="w-full h-auto mb-2 rounded-lg">
                         <h3 class="text-center text-xl font-semibold mb-2">Rat #<?php echo $i; ?></h3>
                         <p class="text-gray-600">Description of rat #<?php echo $i; ?></p>
                     </div>
