@@ -1,6 +1,18 @@
 <?php
+ob_start();
+$currentTime = date('H');
+$greeting = '';
 
+if ($currentTime >= 5 && $currentTime < 12) {
+    $greeting = 'Bonjour ! ';
+} elseif ($currentTime >= 12 && $currentTime < 18) {
+    $greeting = 'Bonne aprem !';
+} else {
+    $greeting = 'Au lit !';
+}
+ob_end_flush();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,6 +78,7 @@
             <h2 class="text-4xl text-center text-white font-black tracking-tight sm:text-5xl bg-clip-text  mb-6">
                 <span class="border-b-4 border-indigo-400 hover:border-indigo-200 transition duration-300 ease-in-out uppercase cursor-pointer text-white opacity-100">CHO CHO CHOCOBLAST 🎵🎶</span>
             </h2>
+            <p class="text-center text-white font-bold text-xl"><?php echo $greeting; ?></p>
         </div>
     </header>
 </div>
