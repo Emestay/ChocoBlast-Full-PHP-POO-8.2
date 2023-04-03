@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/asset/style/style.css">
+    <link rel="stylesheet" href="ChocoFull/public/asset/style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0e8ceb485d.js" crossorigin="anonymous"></script>
     <style>
@@ -32,6 +32,25 @@
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
         }
 
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            border-radius: 20px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-image: linear-gradient(to right, #059669, #3b82f6);
+            border-radius: 20px;
+            border: 3px solid #f3f4f6;
+        }
+
+        html::-webkit-scrollbar-thumb:hover {
+            background-image: linear-gradient(to right, #047857, #1e40af);
+        }
     </style>
 
     <title>Accueil</title>
@@ -39,16 +58,23 @@
 <body>
 <?php include './app/components/Navbar.php'; ?>
 
-<div class="bg-white">
-    <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24 ">
-        <div class="space-y-12">
-            <h2 class="text-4xl text-center sm:font-black tracking-tight sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-600 mb-6">
 
-                <span class="border-b-2 border-indigo-400  uppercase">Les chocoblasts de la semaine</span>
-
+<div class="min-h-[400px] flex items-center justify-center bg-cover bg-no-repeat bg-center"
+     style="background-image: url('https://source.unsplash.com/featured/?boulangerie');">
+    <header class="bg-gradient-to-r from-slate-300 to-zinc-200 opacity-70 hover:opacity-95 transition duration-300 ease-in-out  backdrop-blur-md p-6 rounded-lg shadow-md">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl text-center text-white font-black tracking-tight sm:text-5xl bg-clip-text  mb-6">
+                <span class="border-b-4 border-indigo-400 hover:border-indigo-200 transition duration-300 ease-in-out uppercase cursor-pointer text-white opacity-100">CHO CHO CHOCOBLAST 🎵🎶</span>
             </h2>
-            <br><ul role="list "
-                    class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0 ">
+        </div>
+    </header>
+</div>
+<div class="bg-orange-100">
+    <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-12 ">
+        <div class="space-y-12">
+            <br>
+            <ul role="list "
+                class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0 ">
                 <?php for ($i = 1; $i <= 4; $i++): ?>
                     <li>
                         <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
@@ -85,7 +111,7 @@
 </div>
 
 
-<div class="container mx-auto p-6">
+<div class="container mx-auto p-6 bg-orange-100">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div class="bg-gradient-to-r from-green-400 to-blue-300 bg-opacity-50 p-8 rounded-lg shadow-md">
             <h2 class="text-3xl font-bold mb-6 text-white">Chocoblasté</h2>
@@ -130,17 +156,20 @@
             <div class="grid grid-cols-3 gap-x-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                        <h3 class="text-xl font-semibold mb-2">Rat #<?php echo $i; ?></h3>
+                        <img src="https://source.unsplash.com/400x300?rat=<?php echo $i; ?>" alt="Rat #<?php echo $i; ?>" class="w-full h-auto mb-2 rounded-lg">
+                        <h3 class="text-center text-xl font-semibold mb-2">Rat #<?php echo $i; ?></h3>
                         <p class="text-gray-600">Description of rat #<?php echo $i; ?></p>
                     </div>
                 <?php endfor; ?>
             </div>
         </div>
+
     </div>
+    <?php include './app/components/Footer.php'; ?>
 </div>
 
+<script>
 
-<?php include './app/components/Footer.php'; ?>
-
+</script>
 </body>
 </html>
