@@ -82,3 +82,12 @@ WHERE id_equipe1 IN (SELECT id_equipe FROM equipe WHERE nom_equipe = 'Toulouse')
 UPDATE score
 SET but2 = but2 + 1
 WHERE id_equipe2 IN (SELECT id_equipe FROM equipe WHERE nom_equipe = 'Toulouse');
+
+-- Suite du 04/04/23
+
+-- F: " jaime pas les gens bons"
+-- Wass: "prends du salami"
+
+
+
+
