@@ -1,7 +1,6 @@
 <?php
 
-require_once '../utils/BddConnect.php';
-require_once '../manager/ManagerUtilisateur.php';
+
 
 if (isset($_POST['submit'])) {
     $nom = $_POST['nom_utilisateur'] ?? null;
@@ -18,7 +17,7 @@ if (isset($_POST['submit'])) {
             $hash_password = password_hash($password, PASSWORD_DEFAULT);
             $user->setPassword($hash_password);
 
-            $target_dir = "../../public/asset/image/";
+            $target_dir = "./public/asset/image/";
             $default_image = "default.jpg";
 
             if (!empty($_FILES['image_utilisateur']['name'])) {
@@ -29,11 +28,12 @@ if (isset($_POST['submit'])) {
                 $image_name = $default_image;
             }
 
-            $user->setImage("http://localhost/chocoFull/public/asset/image/$image_name");
+            $user->setImage("./public/asset/image/$image_name");
+
             $user->insertUser();
 
-            header('refresh:3;url=/ChocoFull/');
-            echo 'Bien joué tu vas etre rediriggé dans 3 secs. Sinon, <a href="/ChocoFull/">clique la</a>.';
+            header('refresh:3;url=./');
+            echo 'Bien joué tu vas etre rediriggé dans 3 secs. Sinon, <a href="./">clique la</a>.';
 
         } else {
             echo "Un compte avec cette adresse email existe déjà.";
@@ -44,3 +44,6 @@ if (isset($_POST['submit'])) {
 } else {
     echo "Formulaire non soumis.";
 }
+
+include './app/vue/view_add_user.php';
+

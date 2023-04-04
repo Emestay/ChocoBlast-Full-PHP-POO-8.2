@@ -7,16 +7,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0e8ceb485d.js" crossorigin="anonymous"></script>
     <title>S'inscire</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffedd5;
+        }
+        </style>
 </head>
 <body>
 <?php include './app/components/Navbar.php'; ?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 ">
     <h1 class="text-4xl text-center font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 mb-8 tracking-wider">
         Rejoins nous voyons !
     </h1>
 
     <div class="bg-white shadow-lg overflow-hidden border border-gray-200 sm:rounded-lg max-w-md mx-auto p-8">
-        <form action="./app/controller/ControllerAddUser.php" method="post" enctype="multipart/form-data"
+        <form action="" method="post" enctype="multipart/form-data"
               class="flex flex-col">
 
             <label for="nom" class="block text-sm font-medium text-gray-700">Ajouter votre nom :</label>
@@ -57,8 +69,9 @@
         </form>
     </div>
 </div>
-
+<div class="container mx-auto p-6 ">
 <?php include './app/components/Footer.php'; ?>
+</div>
 <script>
     document.getElementById("image").addEventListener("change", (e) => {
         const fileName = e.target.files[0].name;

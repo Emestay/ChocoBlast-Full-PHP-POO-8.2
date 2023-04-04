@@ -1,7 +1,3 @@
-<?php
-require './app/controller/ControllerUserMain.php';
-$users = listUsers();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +9,12 @@ $users = listUsers();
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0e8ceb485d.js" crossorigin="anonymous"></script>
     <title>Liste des utilisateurs</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffedd5;
+        }
+    </style>
 </head>
 <body>
 <?php include './app/components/Navbar.php'; ?>
@@ -58,7 +60,7 @@ $users = listUsers();
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?php echo $user['prenom_utilisateur']; ?></td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?php echo $user['mail_utilisateur']; ?></td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                        <form action="./app/controller/ControllerUserMain.php" method="post">
+                        <form action="" method="post">
                             <input type="hidden" name="id" value="<?php echo $user['id_utilisateur']; ?>">
                             <button type="submit" name="delete" class="text-red-600 hover:text-red-900 font-semibold">
                                 Supprimer
@@ -70,8 +72,9 @@ $users = listUsers();
             </tbody>
         </table>
     </div>
+
 </div>
-<?php include './app/components/Footer.php'; ?>
+
 
 </body>
 </html>

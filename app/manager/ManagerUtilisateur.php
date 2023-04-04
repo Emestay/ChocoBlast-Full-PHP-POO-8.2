@@ -1,7 +1,6 @@
 <?php
 
-require_once '../model/utilisateur.php';
-require_once '../utils/BddConnect.php';
+
 
 class ManagerUtilisateur extends Utilisateur
 {

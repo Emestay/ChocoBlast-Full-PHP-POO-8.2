@@ -1,7 +1,4 @@
 <?php
-session_start();
-require_once '../utils/BddConnect.php';
-require_once '../manager/ManagerUtilisateur.php';
 
 $bdd = BddConnect::connexion();
 
@@ -23,14 +20,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['user_prenom'] = $userRow['prenom_utilisateur'];
                 $_SESSION['user_mail'] = $userRow['mail_utilisateur'];
 
-                header("Location: /ChocoFull/");
+                header("Location: ./");
             } else {
-                header("Location: /ChocoFull/Login?error=invalid_password");
+                header("Location: ./Login?error=invalid_password");
             }
         } else {
-            header("Location: /ChocoFull/Login?error=invalid_email");
+            header("Location: ./Login?error=invalid_email");
         }
     } else {
-        header("Location: /ChocoFull/Login?error=missing_fields");
+        header("Location: ./Login?error=missing_fields");
     }
 }
+$errorMsg = '';
+$error = $_GET['error'] ?? '';
+
+
+switch ($error) {
+    case 'invalid_password':
+        $errorMsg = 'Mot de passe incorrect.';
+        break;
+    case 'invalid_email':
+        $errorMsg = "L'email n'est pas valide.";
+        break;
+    case 'missing_fields':
+        $errorMsg = 'Veuillez remplir tous les champs.';
+        break;
+}
+
+// En bas de page j'include la vue
+
+include 'app/vue/view_login_page.php';

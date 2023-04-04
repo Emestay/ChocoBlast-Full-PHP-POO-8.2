@@ -6,14 +6,12 @@
                 <h3 class="font-bold text-lg mb-3">À propos</h3>
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-purple-900">Notre histoire</a></li>
-                    <li><a href="#" class="hover:text-purple-900">Équipe</a></li>
-                    <li><a href="#" class="hover:text-purple-900">Mentions légales</a></li>
+                    <li><a href="#" class="hover:text-purple-900">La team</a></li>
                 </ul>
             </div>
             <div>
                 <h3 class="font-bold text-lg mb-3">Services</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-purple-900">Support</a></li>
                     <li><a href="#" class="hover:text-purple-900">FAQ</a></li>
                     <li><a href="#" class="hover:text-purple-900">Contact</a></li>
                 </ul>

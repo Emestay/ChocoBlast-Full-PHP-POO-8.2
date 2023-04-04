@@ -26,6 +26,7 @@ ob_end_flush();
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #ffedd5;
         }
 
         h2 {
@@ -91,7 +92,6 @@ ob_end_flush();
             backdrop-filter: blur(7px);
 
 
-
         }
 
         .hover-border {
@@ -114,6 +114,8 @@ ob_end_flush();
 </head>
 <body>
 <?php include './app/components/Navbar.php'; ?>
+<br>
+<br>
 
 
 <div class="banner">
@@ -126,53 +128,53 @@ ob_end_flush();
         </div>
     </header>
 </div>
-<div class="bg-orange-100">
-    <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-12 ">
-        <div class="space-y-12">
-            <br>
-            <ul role="list "
-                class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0 ">
-                <?php for ($i = 1; $i <= 4; $i++): ?>
-                    <li>
-                        <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-                            <div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                                <img class="object-cover shadow-lg rounded-lg transform hover:scale-125 transition duration-300"
-                                     src="https://via.placeholder.com/300"
-                                     alt="Chocoblast #<?php echo $i; ?>">
-                            </div>
-                            <div class="sm:col-span-2">
-                                <div class="space-y-4">
-                                    <div class="text-lg leading-6 font-medium space-y-1">
-                                        <h3 class="text-indigo-600 hover:text-purple-800 transition duration-300">
-                                            Chocoblast #<?php echo $i; ?></h3>
-                                    </div>
-                                    <div class="text-lg">
-                                        <p class="text-gray-500">
-                                            I just wanna use the phone. No no. Lorraine, Lorraine, what are you
-                                            doing? Who is that guy. Marty, you interacted with anybody else today,
-                                            besides me? Shit.</p>
-                                    </div>
-                                    <a href="#"
-                                       class="inline-flex items-center px-4 py-2 border border-rose-200 text-sm font-medium rounded-md shadow-sm text-sky-900 bg-gradient-to-r from-amber-100 to-rose-200 bg-opacity-50 p-8 rounded-lg shadow-md hover:bg-indigo-800 hover:scale-105 transition duration-200">
-                                        En savoir plus 😏
-                                    </a>
+
+<div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-12 ">
+    <div class="space-y-12">
+        <br>
+        <ul role="list "
+            class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0 ">
+            <?php for ($i = 1; $i <= 4; $i++): ?>
+                <li>
+                    <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+                        <div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                            <img class="object-cover shadow-lg rounded-lg transform hover:scale-125 transition duration-300"
+                                 src="https://via.placeholder.com/300"
+                                 alt="Chocoblast #<?php echo $i; ?>">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <div class="space-y-4">
+                                <div class="text-lg leading-6 font-medium space-y-1">
+                                    <h3 class="text-indigo-600 hover:text-purple-800 transition duration-300">
+                                        Chocoblast #<?php echo $i; ?></h3>
                                 </div>
+                                <div class="text-lg">
+                                    <p class="text-gray-500">
+                                        I just wanna use the phone. No no. Lorraine, Lorraine, what are you
+                                        doing? Who is that guy. Marty, you interacted with anybody else today,
+                                        besides me? Shit.</p>
+                                </div>
+                                <a href="#"
+                                   class="inline-flex items-center px-4 py-2 border border-rose-200 text-sm font-medium rounded-md shadow-sm text-sky-900 bg-gradient-to-r from-amber-100 to-rose-200 bg-opacity-50 p-8 rounded-lg shadow-md hover:bg-indigo-800 hover:scale-105 transition duration-200">
+                                    En savoir plus 😏
+                                </a>
                             </div>
                         </div>
-                    </li>
-                <?php endfor; ?>
+                    </div>
+                </li>
+            <?php endfor; ?>
 
-            </ul>
-        </div>
+        </ul>
     </div>
 </div>
 
 
-<div class="container mx-auto p-6 bg-orange-100">
+<div class="container mx-auto p-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Chocoblasté -->
         <div class="bg-gradient-to-r from-green-400 to-blue-300 bg-opacity-50 p-8 rounded-lg shadow-md">
             <h2 class="text-3xl font-bold mb-6 text-white">Chocoblasté</h2>
-            <div class="grid grid-cols-3 gap-x-6">
+            <div class="grid grid-cols-3 gap-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
                         <h3 class="text-xl font-semibold mb-2">Chocoblasté #<?php echo $i; ?></h3>
@@ -181,9 +183,11 @@ ob_end_flush();
                 <?php endfor; ?>
             </div>
         </div>
+
+        <!-- Chocoblasteur -->
         <div class="bg-gradient-to-r from-red-400 to-yellow-300 bg-opacity-50 p-8 rounded-lg shadow-md">
             <h2 class="text-3xl font-bold mb-6 text-white">Chocoblasteur</h2>
-            <div class="grid grid-cols-3 gap-x-6">
+            <div class="grid grid-cols-3 gap-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
                         <h3 class="text-xl font-semibold mb-2">Chocoblasteur #<?php echo $i; ?></h3>
@@ -197,9 +201,10 @@ ob_end_flush();
     <hr class="my-12 border-t-2 border-cyan-600 opacity-50">
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Top 3 Chocoblast -->
         <div class="bg-gradient-to-r from-purple-400 to-pink-300 bg-opacity-50 p-8 rounded-lg shadow-md">
             <h2 class="text-3xl font-bold mb-6 text-white">Top 3 Chocoblast</h2>
-            <div class="grid grid-cols-3 gap-x-6">
+            <div class="grid grid-cols-3 gap-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
                         <h3 class="text-xl font-semibold mb-2">Chocoblast #<?php echo $i; ?></h3>
@@ -208,9 +213,10 @@ ob_end_flush();
                 <?php endfor; ?>
             </div>
         </div>
+        <!-- Top 3 Rat -->
         <div class="bg-gradient-to-r from-cyan-400 to-lime-300 bg-opacity-50 p-8 rounded-lg shadow-md">
             <h2 class="text-3xl font-bold mb-6 text-white">Top 3 Rat</h2>
-            <div class="grid grid-cols-3 gap-x-6">
+            <div class="grid grid-cols-3 gap-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
                         <img src="https://source.unsplash.com/400x300?rat=<?php echo $i; ?>"
@@ -221,10 +227,10 @@ ob_end_flush();
                 <?php endfor; ?>
             </div>
         </div>
-
     </div>
     <?php include './app/components/Footer.php'; ?>
 </div>
+
 
 </body>
 </html>

@@ -1,20 +1,3 @@
-<?php
-$error = $_GET['error'] ?? '';
-$errorMsg = '';
-
-switch ($error) {
-    case 'invalid_password':
-        $errorMsg = 'Mot de passe incorrect.';
-        break;
-    case 'invalid_email':
-        $errorMsg = "L'email n'est pas valide.";
-        break;
-    case 'missing_fields':
-        $errorMsg = 'Veuillez remplir tous les champs.';
-        break;
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,25 +8,36 @@ switch ($error) {
     <link rel="stylesheet" href="./public/asset/style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0e8ceb485d.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffedd5;
+        }
+    </style>
 
     <title>Chocoblast - Connexion</title>
 </head>
 <body>
 <?php include './app/components/Navbar.php'; ?>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="container mx-auto p-6 bg-orange-100">
     <h1 class="text-4xl text-center font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 mb-8 tracking-wider">
         <i class="fas fa-sign-in-alt"></i> Connexion
     </h1>
-
+    <br>
+    <br>
     <div class="bg-white shadow-lg overflow-hidden border border-gray-200 sm:rounded-lg max-w-md mx-auto p-8">
         <?php if ($errorMsg): ?>
             <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
                 <strong class="font-bold">Erreur :</strong>
-                <span class="block sm:inline"><?php echo $errorMsg; ?></span>
+                <span class="block sm:inline"><?= $errorMsg; ?></span>
             </div>
         <?php endif; ?>
-        <form action="./app/controller/ControllerLogin.php" method="post"
+        <form action="" method="post"
               class="flex flex-col">
 
             <label for="email" class="block text-sm font-medium text-gray-700">Email :</label>
@@ -67,7 +61,7 @@ switch ($error) {
             <input type="submit" value="Se connecter" name="submit"
                    class="transition ease-in-out cursor-pointer w-full mt-6 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-indigo-400 to-purple-600 hover:bg-gradient-to-r hover:from-indigo-700 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 duration-300">
         </form>
-        <br>
+
 
     </div>
     <br>
