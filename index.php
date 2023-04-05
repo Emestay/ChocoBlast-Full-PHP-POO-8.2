@@ -26,6 +26,6 @@ switch ($path) {
         include "./app/controller/ControllerLogout.php";
         break;
 
-    //default :
-    //include './App/controler/Controler404.php';
+    default :
+        include './app/controller/Controller404.php';
 }
