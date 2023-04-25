@@ -21,9 +21,9 @@
             z-index: 200;
             position: absolute;
             left: 50%;
-            top: 15%;
+            top: 5%;
             transform: translate(-50%, -50%);
-            font: bold 300px Arial, sans-serif;
+            font: bold 400px Arial, sans-serif;
             text-align: center;
             color: transparent;
             text-shadow: 0 0 30px rgba(0, 0, 0, .5);
@@ -31,10 +31,13 @@
         }
 
         @keyframes flicker {
-            0% { text-shadow: 0 0 30px rgba(0, 0, 0, .5); }
-            33% { text-shadow: 0 0 10px rgba(0, 0, 0, .4); }
-            66% { text-shadow: 0 0 20px rgba(0, 0, 0, .2); }
-            100% { text-shadow: 0 0 40px rgba(0, 0, 0, .8); }
+            0% { text-shadow: 0 0 35px rgba(0, 0, 0, .5); }
+            25% { text-shadow: 0 0 19px rgba(0, 0, 0, .4); }
+            50% { text-shadow: 0 0 23px rgba(0, 0, 0, .2); }
+            65% { text-shadow: 0 0 30px rgba(0, 0, 0, .8); }
+            75% { text-shadow: 0 0 48px rgba(0, 0, 0, .8); }
+            85% { text-shadow: 0 0 42px rgba(0, 0, 0, .8); }
+            100% { text-shadow: 0 0 53px rgba(0, 0, 0, .8); }
         }
 
         .back-button {
@@ -47,7 +50,6 @@
             padding: 10px 20px;
             background-color: rgba(255, 255, 255, 0.5);
             color: #000;
-            border: none;
             cursor: pointer;
             text-decoration: none;
             transition: background-color 0.3s;

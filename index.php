@@ -25,6 +25,9 @@ switch ($path) {
     case $path === "/ChocoFull/Logout":
         include "./app/controller/ControllerLogout.php";
         break;
+    case $path === "/ChocoFull/Commentaire":
+        include "./app/controller/ControllerCommentaire.php";
+        break;
 
     default :
         include './app/controller/Controller404.php';

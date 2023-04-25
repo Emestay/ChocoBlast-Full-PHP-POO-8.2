@@ -23,6 +23,8 @@ ob_end_flush();
     <link rel="stylesheet" href="./public/asset/style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0e8ceb485d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -202,7 +204,7 @@ ob_end_flush();
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Top 3 Chocoblast -->
-        <div class="bg-gradient-to-r from-purple-400 to-pink-300 bg-opacity-50 p-8 rounded-lg shadow-md">
+        <div class="bg-gradient-to-r from-sky-400 to-green-300 bg-opacity-50 p-8 rounded-lg shadow-md">
             <h2 class="text-3xl font-bold mb-6 text-white">Top 3 Chocoblast</h2>
             <div class="grid grid-cols-3 gap-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>

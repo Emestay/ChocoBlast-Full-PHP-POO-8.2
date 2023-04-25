@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="./public/asset/style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0e8ceb485d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>S'inscire</title>
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;

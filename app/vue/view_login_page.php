@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="./public/asset/style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0e8ceb485d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #ffedd5;
         }
     </style>
-
     <title>Chocoblast - Connexion</title>
 </head>
 <body>
@@ -39,7 +40,6 @@
         <?php endif; ?>
         <form action="" method="post"
               class="flex flex-col">
-
             <label for="email" class="block text-sm font-medium text-gray-700">Email :</label>
             <div class="mt-1 relative rounded-md shadow-sm">
                 <input type="email" name="email" id="email"
@@ -48,7 +48,6 @@
                     <i class="fas fa-envelope text-gray-400"></i>
                 </div>
             </div>
-
             <label for="password" class="block text-sm font-medium text-gray-700 mt-4">Mot de passe :</label>
             <div class="mt-1 relative rounded-md shadow-sm">
                 <input type="password" name="password" id="password"
@@ -57,21 +56,14 @@
                     <i class="fas fa-lock text-gray-400"></i>
                 </div>
             </div>
-
             <input type="submit" value="Se connecter" name="submit"
                    class="transition ease-in-out cursor-pointer w-full mt-6 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-indigo-400 to-purple-600 hover:bg-gradient-to-r hover:from-indigo-700 hover:to-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 duration-300">
         </form>
-
-
     </div>
     <br>
     <br>
     <br>
     <?php include './app/components/Footer.php'; ?>
 </div>
-
-
-
-
 </body>
 </html>

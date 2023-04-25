@@ -1,7 +1,5 @@
 <?php
 
-
-
 if (isset($_POST['submit'])) {
     $nom = $_POST['nom_utilisateur'] ?? null;
     $prenom = $_POST['prenom_utilisateur'] ?? null;
@@ -46,4 +44,3 @@ if (isset($_POST['submit'])) {
 }
 
 include './app/vue/view_add_user.php';
-
