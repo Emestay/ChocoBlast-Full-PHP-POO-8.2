@@ -1,6 +1,8 @@
 <?php
 
-function listUsers()
+use JetBrains\PhpStorm\NoReturn;
+
+function listUsers(): bool|array
 {
     $bdd = BddConnect::connexion();
     $stmt = $bdd->query("SELECT * FROM utilisateur");
@@ -9,7 +11,7 @@ function listUsers()
 }
 
 
-function deleteUser($id)
+#[NoReturn] function deleteUser($id): void
 {
     $bdd = BddConnect::connexion();
     $stmt = $bdd->prepare("DELETE FROM utilisateur WHERE id_utilisateur = ?");
