@@ -44,11 +44,11 @@
             $commentaires = CommentaireController::getAllCommentaires();
             foreach ($commentaires as $commentaire) : ?>
                 <tr class="hover:bg-gray-100">
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?php echo $commentaire->getIdCommentaire(); ?></td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?php echo $commentaire->getTextCommentaire(); ?></td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?= $commentaire->getIdCommentaire(); ?></td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?= $commentaire->getTextCommentaire(); ?></td>
                     <td class="px-6 py-4 whitespace-nowrap">
                         <form action="" method="post">
-                            <input type="hidden" name="id" value="<?php echo $commentaire->getIdCommentaire(); ?>">
+                            <input type="hidden" name="id" value="<?= $commentaire->getIdCommentaire(); ?>">
                             <button type="submit" name="delete" class="text-red-600 hover:text-red-900 font-semibold">
                                 Supprimer
                             </button>
