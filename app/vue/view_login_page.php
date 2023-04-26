@@ -19,7 +19,7 @@
     <title>Chocoblast - Connexion</title>
 </head>
 <body>
-<?php include './app/components/Navbar.php'; ?>
+<?= $navbar; ?>
 <br>
 <br>
 <br>

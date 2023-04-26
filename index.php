@@ -2,6 +2,11 @@
 session_start();
 require_once 'app/requireAll.php';
 
+ob_start();
+include 'app/components/Navbar.php';
+$navbar = ob_get_contents();
+ob_end_clean();
+
 
 $url = parse_url($_SERVER['REQUEST_URI']);
 $path = $url['path'] ?? '/';

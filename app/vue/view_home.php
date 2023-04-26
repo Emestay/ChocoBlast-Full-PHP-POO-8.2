@@ -115,7 +115,7 @@ ob_end_flush();
     <title>Accueil</title>
 </head>
 <body>
-<?php include './app/components/Navbar.php'; ?>
+<?= $navbar; ?>
 <br>
 <br>
 
@@ -126,7 +126,7 @@ ob_end_flush();
             <h2 class="text-4xl text-center text-white font-black tracking-tight sm:text-5xl bg-clip-text mb-6">
                 <span class="hover-border uppercase text-white opacity-100 font-bold">CHO CHO CHOCOBLAST 🎵🎶</span>
             </h2>
-            <p class="text-center text-white font-bold text-xl"><?php echo $greeting; ?></p>
+            <p class="text-center text-white font-bold text-xl"><?= $greeting; ?></p>
         </div>
     </header>
 </div>
@@ -142,13 +142,13 @@ ob_end_flush();
                         <div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                             <img class="object-cover shadow-lg rounded-lg transform hover:scale-125 transition duration-300"
                                  src="https://via.placeholder.com/300"
-                                 alt="Chocoblast #<?php echo $i; ?>">
+                                 alt="Chocoblast #<?= $i; ?>">
                         </div>
                         <div class="sm:col-span-2">
                             <div class="space-y-4">
                                 <div class="text-lg leading-6 font-medium space-y-1">
                                     <h3 class="text-indigo-600 hover:text-purple-800 transition duration-300">
-                                        Chocoblast #<?php echo $i; ?></h3>
+                                        Chocoblast #<?= $i; ?></h3>
                                 </div>
                                 <div class="text-lg">
                                     <p class="text-gray-500">
@@ -179,8 +179,8 @@ ob_end_flush();
             <div class="grid grid-cols-3 gap-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                        <h3 class="text-xl font-semibold mb-2">Chocoblasté #<?php echo $i; ?></h3>
-                        <p class="text-gray-600">Description of chocoblasté #<?php echo $i; ?></p>
+                        <h3 class="text-xl font-semibold mb-2">Chocoblasté #<?= $i; ?></h3>
+                        <p class="text-gray-600">Description of chocoblasté #<?= $i; ?></p>
                     </div>
                 <?php endfor; ?>
             </div>
@@ -192,8 +192,8 @@ ob_end_flush();
             <div class="grid grid-cols-3 gap-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                        <h3 class="text-xl font-semibold mb-2">Chocoblasteur #<?php echo $i; ?></h3>
-                        <p class="text-gray-600">Description of chocoblasteur #<?php echo $i; ?></p>
+                        <h3 class="text-xl font-semibold mb-2">Chocoblasteur #<?= $i; ?></h3>
+                        <p class="text-gray-600">Description of chocoblasteur #<?= $i; ?></p>
                     </div>
                 <?php endfor; ?>
             </div>
@@ -209,8 +209,8 @@ ob_end_flush();
             <div class="grid grid-cols-3 gap-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                        <h3 class="text-xl font-semibold mb-2">Chocoblast #<?php echo $i; ?></h3>
-                        <p class="text-gray-600">Description of chocoblast #<?php echo $i; ?></p>
+                        <h3 class="text-xl font-semibold mb-2">Chocoblast #<?= $i; ?></h3>
+                        <p class="text-gray-600">Description of chocoblast #<?= $i; ?></p>
                     </div>
                 <?php endfor; ?>
             </div>
@@ -221,10 +221,10 @@ ob_end_flush();
             <div class="grid grid-cols-3 gap-6">
                 <?php for ($i = 1; $i <= 3; $i++): ?>
                     <div class="bg-white rounded-lg shadow-lg p-4 transform hover:scale-105 transition duration-300">
-                        <img src="https://source.unsplash.com/400x300?rat=<?php echo $i; ?>"
+                        <img src="https://source.unsplash.com/400x300?rat=<?= $i; ?>"
                              alt="Rat #<?php echo $i; ?>" class="w-full h-auto mb-2 rounded-lg">
-                        <h3 class="text-center text-xl font-semibold mb-2">Rat #<?php echo $i; ?></h3>
-                        <p class="text-gray-600">Description of rat #<?php echo $i; ?></p>
+                        <h3 class="text-center text-xl font-semibold mb-2">Rat #<?= $i; ?></h3>
+                        <p class="text-gray-600">Description of rat #<?= $i; ?></p>
                     </div>
                 <?php endfor; ?>
             </div>

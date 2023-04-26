@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-<?php include './app/components/Navbar.php'; ?>
+<?= $navbar; ?>
 
 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <h1 class="text-4xl text-center font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 mb-8 tracking-wider">
@@ -55,7 +55,7 @@
                 <tr class="hover:bg-gray-100">
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?php echo $user['id_utilisateur']; ?></td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                        <img src="<?php echo $user['image_utilisateur']; ?>" alt="Avatar"
+                        <img src="<?= $user['image_utilisateur']; ?>" alt="Avatar"
                              class="w-10 h-10 rounded-full">
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?php echo $user['nom_utilisateur']; ?></td>
@@ -63,7 +63,7 @@
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"><?php echo $user['mail_utilisateur']; ?></td>
                     <td class="px-6 py-4 whitespace-nowrap">
                         <form action="" method="post">
-                            <input type="hidden" name="id" value="<?php echo $user['id_utilisateur']; ?>">
+                            <input type="hidden" name="id" value="<?= $user['id_utilisateur']; ?>">
                             <button type="submit" name="delete" class="text-red-600 hover:text-red-900 font-semibold">
                                 Supprimer
                             </button>
